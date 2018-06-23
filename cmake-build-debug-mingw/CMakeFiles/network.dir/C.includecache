@@ -1,0 +1,68 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/vidahaha/CLionProjects/network/main.c
+stdio.h
+-
+pcap.h
+C:/Users/vidahaha/CLionProjects/network/pcap.h
+
+E:/CLion 2018.1.5/plugins/WpdPack/Include/IP6_misc.h
+winsock2.h
+-
+ws2tcpip.h
+-
+
+E:/CLion 2018.1.5/plugins/WpdPack/Include/Win32-Extensions.h
+
+E:/CLion 2018.1.5/plugins/WpdPack/Include/bittypes.h
+
+E:/CLion 2018.1.5/plugins/WpdPack/Include/pcap-stdinc.h
+winsock2.h
+-
+fcntl.h
+-
+bittypes.h
+E:/CLion 2018.1.5/plugins/WpdPack/Include/bittypes.h
+time.h
+-
+io.h
+-
+IP6_misc.h
+E:/CLion 2018.1.5/plugins/WpdPack/Include/IP6_misc.h
+stdint.h
+-
+
+E:/CLion 2018.1.5/plugins/WpdPack/Include/pcap.h
+pcap/pcap.h
+-
+
+E:/CLion 2018.1.5/plugins/WpdPack/Include/pcap/bpf.h
+
+E:/CLion 2018.1.5/plugins/WpdPack/Include/pcap/pcap.h
+pcap-stdinc.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+sys/types.h
+-
+sys/time.h
+-
+pcap/bpf.h
+-
+stdio.h
+-
+Win32-Extensions.h
+-
+remote-ext.h
+-
+
+E:/CLion 2018.1.5/plugins/WpdPack/Include/remote-ext.h
+
