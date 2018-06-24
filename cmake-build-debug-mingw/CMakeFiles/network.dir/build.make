@@ -81,19 +81,73 @@ CMakeFiles/network.dir/main.c.obj.provides: CMakeFiles/network.dir/main.c.obj.re
 CMakeFiles/network.dir/main.c.obj.provides.build: CMakeFiles/network.dir/main.c.obj
 
 
+CMakeFiles/network.dir/catch_packet.c.obj: CMakeFiles/network.dir/flags.make
+CMakeFiles/network.dir/catch_packet.c.obj: CMakeFiles/network.dir/includes_C.rsp
+CMakeFiles/network.dir/catch_packet.c.obj: ../catch_packet.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\vidahaha\CLionProjects\network\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/network.dir/catch_packet.c.obj"
+	C:\Users\vidahaha\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\network.dir\catch_packet.c.obj   -c C:\Users\vidahaha\CLionProjects\network\catch_packet.c
+
+CMakeFiles/network.dir/catch_packet.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/network.dir/catch_packet.c.i"
+	C:\Users\vidahaha\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\vidahaha\CLionProjects\network\catch_packet.c > CMakeFiles\network.dir\catch_packet.c.i
+
+CMakeFiles/network.dir/catch_packet.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/network.dir/catch_packet.c.s"
+	C:\Users\vidahaha\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\vidahaha\CLionProjects\network\catch_packet.c -o CMakeFiles\network.dir\catch_packet.c.s
+
+CMakeFiles/network.dir/catch_packet.c.obj.requires:
+
+.PHONY : CMakeFiles/network.dir/catch_packet.c.obj.requires
+
+CMakeFiles/network.dir/catch_packet.c.obj.provides: CMakeFiles/network.dir/catch_packet.c.obj.requires
+	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/catch_packet.c.obj.provides.build
+.PHONY : CMakeFiles/network.dir/catch_packet.c.obj.provides
+
+CMakeFiles/network.dir/catch_packet.c.obj.provides.build: CMakeFiles/network.dir/catch_packet.c.obj
+
+
+CMakeFiles/network.dir/pcap_analysis.c.obj: CMakeFiles/network.dir/flags.make
+CMakeFiles/network.dir/pcap_analysis.c.obj: CMakeFiles/network.dir/includes_C.rsp
+CMakeFiles/network.dir/pcap_analysis.c.obj: ../pcap_analysis.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\vidahaha\CLionProjects\network\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/network.dir/pcap_analysis.c.obj"
+	C:\Users\vidahaha\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles\network.dir\pcap_analysis.c.obj   -c C:\Users\vidahaha\CLionProjects\network\pcap_analysis.c
+
+CMakeFiles/network.dir/pcap_analysis.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/network.dir/pcap_analysis.c.i"
+	C:\Users\vidahaha\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E C:\Users\vidahaha\CLionProjects\network\pcap_analysis.c > CMakeFiles\network.dir\pcap_analysis.c.i
+
+CMakeFiles/network.dir/pcap_analysis.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/network.dir/pcap_analysis.c.s"
+	C:\Users\vidahaha\Downloads\MinGW\bin\gcc.exe $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S C:\Users\vidahaha\CLionProjects\network\pcap_analysis.c -o CMakeFiles\network.dir\pcap_analysis.c.s
+
+CMakeFiles/network.dir/pcap_analysis.c.obj.requires:
+
+.PHONY : CMakeFiles/network.dir/pcap_analysis.c.obj.requires
+
+CMakeFiles/network.dir/pcap_analysis.c.obj.provides: CMakeFiles/network.dir/pcap_analysis.c.obj.requires
+	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/pcap_analysis.c.obj.provides.build
+.PHONY : CMakeFiles/network.dir/pcap_analysis.c.obj.provides
+
+CMakeFiles/network.dir/pcap_analysis.c.obj.provides.build: CMakeFiles/network.dir/pcap_analysis.c.obj
+
+
 # Object files for target network
 network_OBJECTS = \
-"CMakeFiles/network.dir/main.c.obj"
+"CMakeFiles/network.dir/main.c.obj" \
+"CMakeFiles/network.dir/catch_packet.c.obj" \
+"CMakeFiles/network.dir/pcap_analysis.c.obj"
 
 # External object files for target network
 network_EXTERNAL_OBJECTS =
 
 network.exe: CMakeFiles/network.dir/main.c.obj
+network.exe: CMakeFiles/network.dir/catch_packet.c.obj
+network.exe: CMakeFiles/network.dir/pcap_analysis.c.obj
 network.exe: CMakeFiles/network.dir/build.make
 network.exe: CMakeFiles/network.dir/linklibs.rsp
 network.exe: CMakeFiles/network.dir/objects1.rsp
 network.exe: CMakeFiles/network.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\vidahaha\CLionProjects\network\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable network.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\vidahaha\CLionProjects\network\cmake-build-debug-mingw\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable network.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\network.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -102,6 +156,8 @@ CMakeFiles/network.dir/build: network.exe
 .PHONY : CMakeFiles/network.dir/build
 
 CMakeFiles/network.dir/requires: CMakeFiles/network.dir/main.c.obj.requires
+CMakeFiles/network.dir/requires: CMakeFiles/network.dir/catch_packet.c.obj.requires
+CMakeFiles/network.dir/requires: CMakeFiles/network.dir/pcap_analysis.c.obj.requires
 
 .PHONY : CMakeFiles/network.dir/requires
 

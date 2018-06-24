@@ -122,6 +122,33 @@ network/fast:
 	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/build
 .PHONY : network/fast
 
+catch_packet.obj: catch_packet.c.obj
+
+.PHONY : catch_packet.obj
+
+# target to build an object file
+catch_packet.c.obj:
+	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/catch_packet.c.obj
+.PHONY : catch_packet.c.obj
+
+catch_packet.i: catch_packet.c.i
+
+.PHONY : catch_packet.i
+
+# target to preprocess a source file
+catch_packet.c.i:
+	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/catch_packet.c.i
+.PHONY : catch_packet.c.i
+
+catch_packet.s: catch_packet.c.s
+
+.PHONY : catch_packet.s
+
+# target to generate assembly for a file
+catch_packet.c.s:
+	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/catch_packet.c.s
+.PHONY : catch_packet.c.s
+
 main.obj: main.c.obj
 
 .PHONY : main.obj
@@ -149,6 +176,33 @@ main.c.s:
 	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/main.c.s
 .PHONY : main.c.s
 
+pcap_analysis.obj: pcap_analysis.c.obj
+
+.PHONY : pcap_analysis.obj
+
+# target to build an object file
+pcap_analysis.c.obj:
+	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/pcap_analysis.c.obj
+.PHONY : pcap_analysis.c.obj
+
+pcap_analysis.i: pcap_analysis.c.i
+
+.PHONY : pcap_analysis.i
+
+# target to preprocess a source file
+pcap_analysis.c.i:
+	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/pcap_analysis.c.i
+.PHONY : pcap_analysis.c.i
+
+pcap_analysis.s: pcap_analysis.c.s
+
+.PHONY : pcap_analysis.s
+
+# target to generate assembly for a file
+pcap_analysis.c.s:
+	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/pcap_analysis.c.s
+.PHONY : pcap_analysis.c.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -158,9 +212,15 @@ help:
 	@echo ... rebuild_cache
 	@echo ... network
 	@echo ... edit_cache
+	@echo ... catch_packet.obj
+	@echo ... catch_packet.i
+	@echo ... catch_packet.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
+	@echo ... pcap_analysis.obj
+	@echo ... pcap_analysis.i
+	@echo ... pcap_analysis.s
 .PHONY : help
 
 

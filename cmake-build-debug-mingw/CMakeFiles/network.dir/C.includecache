@@ -6,45 +6,39 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/vidahaha/CLionProjects/network/main.c
-stdio.h
--
-pcap.h
-C:/Users/vidahaha/CLionProjects/network/pcap.h
-
-E:/CLion 2018.1.5/plugins/WpdPack/Include/IP6_misc.h
+.././include/IP6_misc.h
 winsock2.h
 -
 ws2tcpip.h
 -
 
-E:/CLion 2018.1.5/plugins/WpdPack/Include/Win32-Extensions.h
+.././include/Win32-Extensions.h
 
-E:/CLion 2018.1.5/plugins/WpdPack/Include/bittypes.h
+.././include/bittypes.h
 
-E:/CLion 2018.1.5/plugins/WpdPack/Include/pcap-stdinc.h
+.././include/pcap-stdinc.h
 winsock2.h
 -
 fcntl.h
 -
 bittypes.h
-E:/CLion 2018.1.5/plugins/WpdPack/Include/bittypes.h
+.././include/bittypes.h
 time.h
 -
 io.h
 -
 IP6_misc.h
-E:/CLion 2018.1.5/plugins/WpdPack/Include/IP6_misc.h
+.././include/IP6_misc.h
 stdint.h
 -
 
-E:/CLion 2018.1.5/plugins/WpdPack/Include/pcap.h
+.././include/pcap.h
 pcap/pcap.h
 -
 
-E:/CLion 2018.1.5/plugins/WpdPack/Include/pcap/bpf.h
+.././include/pcap/bpf.h
 
-E:/CLion 2018.1.5/plugins/WpdPack/Include/pcap/pcap.h
+.././include/pcap/pcap.h
 pcap-stdinc.h
 -
 sys/types.h
@@ -64,5 +58,67 @@ Win32-Extensions.h
 remote-ext.h
 -
 
-E:/CLion 2018.1.5/plugins/WpdPack/Include/remote-ext.h
+.././include/pthread.h
+windows.h
+-
+config.h
+.././include/config.h
+time.h
+-
+signal.h
+-
+limits.h
+-
+need_errno.h
+.././include/need_errno.h
+errno.h
+-
+sched.h
+-
+sys/types.h
+-
+
+.././include/remote-ext.h
+
+.././include/sched.h
+need_errno.h
+.././include/need_errno.h
+errno.h
+-
+sys/types.h
+-
+time.h
+-
+
+C:/Users/vidahaha/CLionProjects/network/catch_packet.c
+stdio.h
+-
+stdlib.h
+-
+pcap.h
+C:/Users/vidahaha/CLionProjects/network/pcap.h
+pthread.h
+C:/Users/vidahaha/CLionProjects/network/pthread.h
+windows.h
+-
+protocol.h
+C:/Users/vidahaha/CLionProjects/network/protocol.h
+
+C:/Users/vidahaha/CLionProjects/network/main.c
+
+C:/Users/vidahaha/CLionProjects/network/pcap_analysis.c
+stdio.h
+-
+malloc.h
+-
+time.h
+-
+string.h
+-
+pcap.h
+-
+protocol.h
+C:/Users/vidahaha/CLionProjects/network/protocol.h
+
+C:/Users/vidahaha/CLionProjects/network/protocol.h
 

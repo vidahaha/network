@@ -4,13 +4,15 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "C:/Users/vidahaha/CLionProjects/network/catch_packet.c" "C:/Users/vidahaha/CLionProjects/network/cmake-build-debug-mingw/CMakeFiles/network.dir/catch_packet.c.obj"
   "C:/Users/vidahaha/CLionProjects/network/main.c" "C:/Users/vidahaha/CLionProjects/network/cmake-build-debug-mingw/CMakeFiles/network.dir/main.c.obj"
+  "C:/Users/vidahaha/CLionProjects/network/pcap_analysis.c" "C:/Users/vidahaha/CLionProjects/network/cmake-build-debug-mingw/CMakeFiles/network.dir/pcap_analysis.c.obj"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "E:/CLion 2018.1.5/plugins/WpdPack/Include"
+  ".././include"
   )
 
 # Targets to which this target links.

@@ -65,7 +65,7 @@ CMAKE_BINARY_DIR = C:\Users\vidahaha\CLionProjects\network\cmake-build-debug-min
 CMakeFiles/network.dir/all:
 	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/depend
 	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\vidahaha\CLionProjects\network\cmake-build-debug-mingw\CMakeFiles --progress-num=1,2 "Built target network"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\vidahaha\CLionProjects\network\cmake-build-debug-mingw\CMakeFiles --progress-num=1,2,3,4 "Built target network"
 .PHONY : CMakeFiles/network.dir/all
 
 # Include target in all.
@@ -75,7 +75,7 @@ all: CMakeFiles/network.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/network.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vidahaha\CLionProjects\network\cmake-build-debug-mingw\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vidahaha\CLionProjects\network\cmake-build-debug-mingw\CMakeFiles 4
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/network.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\vidahaha\CLionProjects\network\cmake-build-debug-mingw\CMakeFiles 0
 .PHONY : CMakeFiles/network.dir/rule

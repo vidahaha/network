@@ -34,7 +34,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="E:/CLion 2018.1.5/plugins/WpdPack/Include"/>
+					<Add directory="C:/Users/vidahaha/CLionProjects/network/./include"/>
 					<Add directory="c:\users\vidahaha\downloads\mingw\bin\../lib/gcc/mingw32/4.8.1/include"/>
 					<Add directory="c:\users\vidahaha\downloads\mingw\bin\../lib/gcc/mingw32/4.8.1/../../../../include"/>
 					<Add directory="c:\users\vidahaha\downloads\mingw\bin\../lib/gcc/mingw32/4.8.1/include-fixed"/>
@@ -54,7 +54,7 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="E:/CLion 2018.1.5/plugins/WpdPack/Include"/>
+					<Add directory="C:/Users/vidahaha/CLionProjects/network/./include"/>
 					<Add directory="c:\users\vidahaha\downloads\mingw\bin\../lib/gcc/mingw32/4.8.1/include"/>
 					<Add directory="c:\users\vidahaha\downloads\mingw\bin\../lib/gcc/mingw32/4.8.1/../../../../include"/>
 					<Add directory="c:\users\vidahaha\downloads\mingw\bin\../lib/gcc/mingw32/4.8.1/include-fixed"/>
@@ -78,10 +78,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/vidahaha/CLionProjects/network/catch_packet.c">
+			<Option target="network"/>
+		</Unit>
 		<Unit filename="C:/Users/vidahaha/CLionProjects/network/main.c">
 			<Option target="network"/>
 		</Unit>
-		<Unit filename="C:/Users/vidahaha/CLionProjects/network/protocal.h">
+		<Unit filename="C:/Users/vidahaha/CLionProjects/network/pcap_analysis.c">
+			<Option target="network"/>
+		</Unit>
+		<Unit filename="C:/Users/vidahaha/CLionProjects/network/protocol.h">
 			<Option target="network"/>
 		</Unit>
 		<Unit filename="C:/Users/vidahaha/CLionProjects/network/CMakeLists.txt">

@@ -1,1 +1,1 @@
- -LE:/CLION2~1.5/plugins/WpdPack/Lib -lwpcap -lPacket -lwpcap -lPacket -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ -LC:/Users/vidahaha/CLionProjects/network/./lib -lwpcap -lPacket -lpthreadVC2 -lpthreadVCE2 -lpthreadVSE2 -lwpcap -lPacket -lpthreadVC2 -lpthreadVCE2 -lpthreadVSE2 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
