@@ -10,6 +10,7 @@
 #include "pthread.h"
 #include <windows.h>
 #include "protocol.h"
+#include "pcap_analysis.h"
 
 typedef struct _argument {
     pcap_t *handle;
@@ -185,7 +186,7 @@ int main(int argc, char const *argv[]) {
         }else{
             //运行到此处代表接受到正常数据包
             // 保存到文件中
-            pcap_dump((u_char *) dumpfile, header, pkt_data);
+            pcap_dump((u_char *)dumpfile, header, pkt_data);
 
             // 将时间戳转换成可识别的格式
             struct tm *ltime;
@@ -214,5 +215,9 @@ int main(int argc, char const *argv[]) {
     pcap_dump_close(dumpfile);
     pcap_close(adhandle);
     printf("\nDone!\n");
+
+    // 文件处理
+    analysis();
+
     return 0;
 }

@@ -8,6 +8,7 @@
 #include <string.h>
 #include <pcap.h>
 #include "protocol.h"
+#include "pcap_analysis.h"
 
 //timeval结构
 typedef struct _shh_timeval{
@@ -322,7 +323,7 @@ void clear_hashTable()
 在以太网中，规定最小的数据包为64个字节，如果数据包不足64字节，则会由网卡填充。
 */
 
-int analysis(int argc, char const *argv[]) {
+int analysis() {
     char *file_output = "result.pcap";
     FILE *fOutput = fopen(file_output, "w");
     fclose(fOutput);        // clear file
@@ -369,8 +370,7 @@ int analysis(int argc, char const *argv[]) {
     int tstamp_start = pkthdr->ts.tv_sec;
     int tstamp_offset = tstamp_start;
     int tstamp_now = tstamp_start;
-    int cycle = atoi(argv[1]);
-    cycle = (cycle > 0) ? cycle : 10;
+    int cycle = 10;
     fprintf(fOutput, "分析周期：%d s\n", cycle);
 
     int i = 0;

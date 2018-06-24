@@ -87,6 +87,9 @@
 		<Unit filename="C:/Users/vidahaha/CLionProjects/network/pcap_analysis.c">
 			<Option target="network"/>
 		</Unit>
+		<Unit filename="C:/Users/vidahaha/CLionProjects/network/pcap_analysis.h">
+			<Option target="network"/>
+		</Unit>
 		<Unit filename="C:/Users/vidahaha/CLionProjects/network/protocol.h">
 			<Option target="network"/>
 		</Unit>
