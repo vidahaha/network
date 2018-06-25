@@ -81,9 +81,6 @@
 		<Unit filename="C:/Users/vidahaha/CLionProjects/network/catch_packet.c">
 			<Option target="network"/>
 		</Unit>
-		<Unit filename="C:/Users/vidahaha/CLionProjects/network/main.c">
-			<Option target="network"/>
-		</Unit>
 		<Unit filename="C:/Users/vidahaha/CLionProjects/network/pcap_analysis.c">
 			<Option target="network"/>
 		</Unit>

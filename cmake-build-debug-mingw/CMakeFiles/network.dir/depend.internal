@@ -13,9 +13,8 @@ CMakeFiles/network.dir/catch_packet.c.obj
  .././include/remote-ext.h
  .././include/sched.h
  C:/Users/vidahaha/CLionProjects/network/catch_packet.c
+ C:/Users/vidahaha/CLionProjects/network/pcap_analysis.h
  C:/Users/vidahaha/CLionProjects/network/protocol.h
-CMakeFiles/network.dir/main.c.obj
- C:/Users/vidahaha/CLionProjects/network/main.c
 CMakeFiles/network.dir/pcap_analysis.c.obj
  .././include/IP6_misc.h
  .././include/Win32-Extensions.h
@@ -26,4 +25,5 @@ CMakeFiles/network.dir/pcap_analysis.c.obj
  .././include/pcap/pcap.h
  .././include/remote-ext.h
  C:/Users/vidahaha/CLionProjects/network/pcap_analysis.c
+ C:/Users/vidahaha/CLionProjects/network/pcap_analysis.h
  C:/Users/vidahaha/CLionProjects/network/protocol.h

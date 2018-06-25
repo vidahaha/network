@@ -103,8 +103,8 @@ windows.h
 -
 protocol.h
 C:/Users/vidahaha/CLionProjects/network/protocol.h
-
-C:/Users/vidahaha/CLionProjects/network/main.c
+pcap_analysis.h
+C:/Users/vidahaha/CLionProjects/network/pcap_analysis.h
 
 C:/Users/vidahaha/CLionProjects/network/pcap_analysis.c
 stdio.h
@@ -119,6 +119,10 @@ pcap.h
 -
 protocol.h
 C:/Users/vidahaha/CLionProjects/network/protocol.h
+pcap_analysis.h
+C:/Users/vidahaha/CLionProjects/network/pcap_analysis.h
+
+C:/Users/vidahaha/CLionProjects/network/pcap_analysis.h
 
 C:/Users/vidahaha/CLionProjects/network/protocol.h
 

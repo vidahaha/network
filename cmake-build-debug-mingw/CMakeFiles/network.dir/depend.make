@@ -12,9 +12,8 @@ CMakeFiles/network.dir/catch_packet.c.obj: .././include/pthread.h
 CMakeFiles/network.dir/catch_packet.c.obj: .././include/remote-ext.h
 CMakeFiles/network.dir/catch_packet.c.obj: .././include/sched.h
 CMakeFiles/network.dir/catch_packet.c.obj: ../catch_packet.c
+CMakeFiles/network.dir/catch_packet.c.obj: ../pcap_analysis.h
 CMakeFiles/network.dir/catch_packet.c.obj: ../protocol.h
-
-CMakeFiles/network.dir/main.c.obj: ../main.c
 
 CMakeFiles/network.dir/pcap_analysis.c.obj: .././include/IP6_misc.h
 CMakeFiles/network.dir/pcap_analysis.c.obj: .././include/Win32-Extensions.h
@@ -25,5 +24,6 @@ CMakeFiles/network.dir/pcap_analysis.c.obj: .././include/pcap/bpf.h
 CMakeFiles/network.dir/pcap_analysis.c.obj: .././include/pcap/pcap.h
 CMakeFiles/network.dir/pcap_analysis.c.obj: .././include/remote-ext.h
 CMakeFiles/network.dir/pcap_analysis.c.obj: ../pcap_analysis.c
+CMakeFiles/network.dir/pcap_analysis.c.obj: ../pcap_analysis.h
 CMakeFiles/network.dir/pcap_analysis.c.obj: ../protocol.h
 

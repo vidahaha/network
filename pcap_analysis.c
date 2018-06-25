@@ -86,7 +86,7 @@ char *long2time(long ltime)
     static char s[100];
 
     t = ltime;
-    p = gmtime(&t);
+    p = localtime(&t);
 
     strftime(s, sizeof(s), "%Y-%m-%d %H:%M:%S", p);
     return s;
@@ -332,8 +332,18 @@ int analysis() {
     char *filename = "traffic.pcap";
     fprintf(fOutput, "数据文件：%s\n", filename);
 
-    printf("载入文件...\n");
-    FILE *fp = fopen(filename, "r");
+    printf("load file...\n");
+    FILE *fp = fopen(filename, "rb");
+
+//    int i = 0;
+//    unsigned char buffer[100];
+//    fread(&buffer, 1, 100, fp);
+//    for(i=0;i<100;i++)
+//    {
+//        printf("%02x, ", buffer[i]);
+//        if ( (i+1) % 16 == 0 ) printf("\n");
+//    }
+
 
     shh_pkthdr *pkthdr = (shh_pkthdr *) malloc(sizeof(shh_pkthdr));
     ether_header *segEther = (ether_header *) malloc(sizeof(ether_header));
@@ -366,16 +376,18 @@ int analysis() {
     // SEEK_SET:文件开头;SEEK_CUR:当前位置;SEEK_END:文件结尾
 
     fread(pkthdr, PACKET_HEADER_LEN, 1, fp);
-    fseek(fp, -PACKET_HEADER_LEN, SEEK_CUR);
     int tstamp_start = pkthdr->ts.tv_sec;
     int tstamp_offset = tstamp_start;
     int tstamp_now = tstamp_start;
-    int cycle = 10;
+    int cycle = 3;
     fprintf(fOutput, "分析周期：%d s\n", cycle);
 
-    int i = 0;
+    fseek(fp, -PACKET_HEADER_LEN, SEEK_CUR);
+
     while (ftell(fp) > 0 && ftell(fp) < fileLen) {
+
         fread(pkthdr, PACKET_HEADER_LEN, 1, fp);
+
         pktLen = pkthdr->caplen;
         tstamp_now = pkthdr->ts.tv_sec;
         if (tstamp_now - tstamp_offset >= cycle) {
@@ -391,14 +403,12 @@ int analysis() {
             parse_flowLink_TCP(fOutput);
             init_flowLink(FLowLink_TCP);
             tstamp_offset = tstamp_now;
-
         }
-        //printf("%d\t", pktLen);
-        //printf("\n%d\t", ++i);
 
         fread(segEther, ETHER_LEN, 1, fp);
+
         if (get_ushort_net(segEther->type) != ETHER_TYPE_IP) {
-            //printf("------\t");
+            printf("---1--\t");
             fseek(fp, pktLen - ETHER_LEN, SEEK_CUR);
             continue;
         }
@@ -409,8 +419,10 @@ int analysis() {
         trailerLen = pktLen - ETHER_LEN - ipLen_total;
         fseek(fp, ipLen_real - IP_LEN_MIN, SEEK_CUR);
 
+        printf("type:%02x\n", segIP->proto);
+
         if (segIP->proto != IP_TCP && segIP->proto != IP_UDP) {
-            //printf("------\t");
+            printf("---2--\t");
             fseek(fp, ipLen_total - ipLen_real + trailerLen, SEEK_CUR);
             continue;
         }
@@ -422,7 +434,7 @@ int analysis() {
         //printf("des:%s\t", iptos(Cur5Set->dip));
 
         if (segIP->proto == IP_TCP) {
-            //printf("TCP\t");
+            printf("TCP\t");
             fread(segTCP, TCP_LEN_MIN, 1, fp);
             tcpLen_real = (((segTCP->th_len) >> 4) & 0x0f) * 4;
             dataLen = ipLen_total - ipLen_real - tcpLen_real;
@@ -432,7 +444,7 @@ int analysis() {
 
             fseek(fp, (tcpLen_real - TCP_LEN_MIN) + dataLen + trailerLen, SEEK_CUR);
         } else if (segIP->proto == IP_UDP) {
-            //printf("UDP\t");
+            printf("UDP\t");
             fread(segUDP, UDP_LEN, 1, fp);
             dataLen = ipLen_total - ipLen_real - UDP_LEN;
 
@@ -441,6 +453,7 @@ int analysis() {
 
             fseek(fp, dataLen + trailerLen, SEEK_CUR);
         }
+
         LinkNode->nln_5set = *Cur5Set;
         LinkNode->nln_upl_size = dataLen;
         LinkNode->nln_downl_size = 0;
@@ -454,6 +467,7 @@ int analysis() {
         } else {
             add_to_flowLink(FLowLink_UDP, LinkNode);
         }
+
     }
     fprintf(fOutput, "\nover\n");
 

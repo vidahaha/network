@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/network.dir/main.c.obj"
   "CMakeFiles/network.dir/catch_packet.c.obj"
   "CMakeFiles/network.dir/pcap_analysis.c.obj"
   "network.pdb"

@@ -33,6 +33,8 @@ void iptos(u_long in, u_short sport, u_long out, u_short dport)
     u_char *p, *q;
     p = (u_char *)&in;
     q = (u_char *)&out;
+    sport = ntohs( sport );
+    dport = ntohs( dport );
     which = (which + 1 == IPTOSBUFFERS ? 0 : which + 1);
     printf("%d.%d.%d.%d:%d -> %d.%d.%d.%d:%d\n\n", p[0], p[1], p[2], p[3], sport, q[0], q[1], q[2], q[3], dport);
 }
@@ -48,7 +50,7 @@ int main(int argc, char const *argv[]) {
     int res;                                    //表示是否接收到了数据包
     char errbuf[PCAP_ERRBUF_SIZE];
     u_int netmask;                       //过滤时用的子网掩码
-    char packet_filter[] = "ip and udp";        //过滤字符
+    char packet_filter[] = "ip and tcp";        //过滤字符
     struct bpf_program fcode;                     //pcap_compile所调用的结构体
     ip_header *ih;                                    //ip头部
     udp_header *uh;                             //udp头部
@@ -92,9 +94,8 @@ int main(int argc, char const *argv[]) {
     for(d=alldevs, i=0; i< inum-1 ; d=d->next, i++);
 
     /* 打开设备 */
-    if ( (adhandle = pcap_open(d->name,          // 设备名
-                              65535,            // 65535保证能捕获到不同数据链路层上的每个数据包的全部内容
-                              PCAP_OPENFLAG_PROMISCUOUS,    // 混杂模式
+    if ( (adhandle = pcap_open_live(d->name,          // 设备名
+                              BUFSIZ,
                               1000,             // 读取超时时间
                               NULL,             // 远程机器验证
                               errbuf            // 错误缓冲池

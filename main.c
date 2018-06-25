@@ -1,4 +1,0 @@
-#define HAVE_REMOTE
-
-
-

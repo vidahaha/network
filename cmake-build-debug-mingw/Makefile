@@ -149,33 +149,6 @@ catch_packet.c.s:
 	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/catch_packet.c.s
 .PHONY : catch_packet.c.s
 
-main.obj: main.c.obj
-
-.PHONY : main.obj
-
-# target to build an object file
-main.c.obj:
-	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/main.c.obj
-.PHONY : main.c.obj
-
-main.i: main.c.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.c.i:
-	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/main.c.i
-.PHONY : main.c.i
-
-main.s: main.c.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.c.s:
-	$(MAKE) -f CMakeFiles\network.dir\build.make CMakeFiles/network.dir/main.c.s
-.PHONY : main.c.s
-
 pcap_analysis.obj: pcap_analysis.c.obj
 
 .PHONY : pcap_analysis.obj
@@ -215,9 +188,6 @@ help:
 	@echo ... catch_packet.obj
 	@echo ... catch_packet.i
 	@echo ... catch_packet.s
-	@echo ... main.obj
-	@echo ... main.i
-	@echo ... main.s
 	@echo ... pcap_analysis.obj
 	@echo ... pcap_analysis.i
 	@echo ... pcap_analysis.s
